@@ -6,6 +6,8 @@ import openai
 
 # setup openai
 openai.api_key = config.openai_api_key
+if config.openai_organization is not None:
+    openai.organization = config.openai_organization
 if config.openai_api_base is not None:
     openai.api_base = config.openai_api_base
 
